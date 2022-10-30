@@ -1,0 +1,94 @@
+.details__wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+}
+.details {
+  ::ng-deep mwl-gauge {
+    width: 150px;
+    height: 150px;
+    display: block;
+    padding: 10px;
+
+    .dial {
+      stroke-width: 10;
+    }
+
+    .value {
+      stroke-dasharray: none;
+      stroke-width: 13;
+    }
+
+    .value-text {
+      fill: #fff;
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+
+  .game__gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: -10.7rem;
+    background-color: rgba(255, 0, 0, 0.219);
+
+    &--label {
+      font-size: 20px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      bottom: 60px;
+      cursor: pointer;
+    }
+  }
+}
+.game {
+  &__banner {
+    height: 442px;
+    overflow: hidden;
+
+    &--img {
+      width: 100%;
+      filter: blur(5px);
+    }
+  }
+
+  &__content {
+    text-align: center;
+    position: relative;
+    top: -200px;
+  }
+
+  &__header {
+    background-color: rgba(255, 0, 0, 0.219);
+    &--title {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: 700;
+      line-height: 70px;
+      white-space: nowrap;
+    }
+    &--release {
+      color: #fff;
+      font-weight: 700;
+    }
+    &--genres {
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+}
+@media screen and (min-width: 750px) {
+  .game {
+    &__header {
+      &--title {
+        font-size: 4rem;
+      }
+    }
+  }
+}
